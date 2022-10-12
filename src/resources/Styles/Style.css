@@ -1,0 +1,36 @@
+#button, #button2, #button3, #button4{
+   /* -fx-background-color: rgb(70,50,40);*/
+  
+    -fx-border-radius: 5;
+    -fx-border-color: #DAA520;
+    -fx-background-image: url('../images/cos.jpg');
+    -fx-background-size: 100% 100%;
+    -fx-animated: true;
+    -fx-font-family: Calligrapher;
+    -fx-font-size: 16px;
+  }
+#button:hover, #button2:hover, #button3:hover, #button4:hover {
+    -fx-background-size: 120% ;
+    -fx-scale-x: 103%;
+    -fx-scale-y: 103%;
+}
+#tlo {
+    -fx-background-image: url('../images/tlo.png');
+    -fx-background-size: 100% 100%;
+}
+
+#labgor, #labdol {
+    -fx-background-image: url('../images/images.jpg');
+    /*-fx-background-image: url('../images/cos.jpg');*/
+
+
+}
+#gif {
+    -fx-background-image: url('../images/giphy.gif');
+    -fx-background-size: 100% 100%;
+
+}
+#speaker {
+    -fx-background-image: url('../images/soundOn.png');
+    -fx-background-size: 100% 100%;
+}

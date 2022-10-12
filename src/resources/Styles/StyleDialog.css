@@ -1,0 +1,21 @@
+#bg {
+    -fx-background-image: url('../images/blad.png');
+    -fx-background-size: 100% 100%;
+    -fx-border-color: #ceae88;
+    -fx-border-width: 5;
+    -fx-background-radius: 5;
+}
+#ok {
+    -fx-border-radius: 6;
+    -fx-border-color: #DAA520;
+    -fx-background-color: #382e1f;
+    -fx-font-family: Calligrapher;
+    -fx-font-size: 16px;
+
+}
+#ok:hover {
+    -fx-background-color:  #5e4b2d;
+    -fx-background-size: 120% ;
+    -fx-scale-x: 103%;
+    -fx-scale-y: 103%;
+}

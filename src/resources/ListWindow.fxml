@@ -1,0 +1,612 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.effect.SepiaTone?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="background" fx:id="mainAnchorPane" minHeight="765.0" minWidth="1295.0" prefHeight="720.0" prefWidth="1280.0" stylesheets="@Styles/StyleCard.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.ListWindowController">
+    <children>
+        <AnchorPane id="anchor" layoutX="170.0" layoutY="81.0" prefHeight="499.0" prefWidth="390.0" style="-fx-background-color: rgba(255,255,255,0.2); -fx-border-color: #5e4b2d; -fx-border-width: 10;" stylesheets="@Styles/StyleCard.css" AnchorPane.leftAnchor="170.0" AnchorPane.rightAnchor="735.0">
+            <children>
+                <ImageView fx:id="characterImage" fitHeight="430.0" fitWidth="339.0" layoutX="26.0" layoutY="41.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="26.0" AnchorPane.rightAnchor="25.0" />
+            </children>
+            <effect>
+                <InnerShadow />
+            </effect>
+        </AnchorPane>
+        <VBox alignment="CENTER" layoutX="695.0" layoutY="81.0" prefHeight="499.0" prefWidth="433.0" spacing="30.0">
+            <children>
+                <HBox alignment="CENTER" prefHeight="172.0" prefWidth="433.0" spacing="8.0">
+                    <children>
+                        <VBox prefHeight="141.0" prefWidth="73.0" spacing="20.0">
+                            <children>
+                                <Text fill="#54462a" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Calligrapher;" text="Wzgórze:">
+                                    <font>
+                                        <Font name="Calligraphic Regular" size="16.0" />
+                                    </font>
+                                    <VBox.margin>
+                                        <Insets />
+                                    </VBox.margin>
+                                </Text>
+                                <Text fill="#54462a" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Calligrapher;" text="Rasa: ">
+                                    <font>
+                                        <Font name="Calligraphic Regular" size="16.0" />
+                                    </font>
+                                </Text>
+                                <Text fill="#54462a" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Calligrapher;" text="Frakcja:">
+                                    <font>
+                                        <Font name="Calligraphic Regular" size="16.0" />
+                                    </font>
+                                </Text>
+                            </children>
+                            <padding>
+                                <Insets top="4.0" />
+                            </padding>
+                        </VBox>
+                        <VBox prefHeight="90.0" prefWidth="176.0" spacing="10.0">
+                            <children>
+                                <ChoiceBox id="choices" fx:id="mountainChoiceBox" prefWidth="170.0" style="-fx-base: #5e4b2d;" stylesheets="@Styles/StyleCard.css">
+                                    <effect>
+                                        <SepiaTone>
+                                            <input>
+                                                <InnerShadow />
+                                            </input>
+                                        </SepiaTone>
+                                    </effect>
+                                </ChoiceBox>
+                                <ChoiceBox id="choices" fx:id="raseChoiceBox" prefHeight="30.0" prefWidth="170.0" style="-fx-base: #5e4b2d;" stylesheets="@Styles/StyleCard.css">
+                                    <effect>
+                                        <SepiaTone>
+                                            <input>
+                                                <InnerShadow />
+                                            </input>
+                                        </SepiaTone>
+                                    </effect>
+                                </ChoiceBox>
+                                <ChoiceBox id="choices" fx:id="proffesionChoiceBox" prefWidth="170.0" style="-fx-base: #5e4b2d;" stylesheets="@Styles/StyleCard.css">
+                                    <effect>
+                                        <SepiaTone>
+                                            <input>
+                                                <InnerShadow />
+                                            </input>
+                                        </SepiaTone>
+                                    </effect>
+                                </ChoiceBox>
+                            </children>
+                        </VBox>
+                    </children>
+                    <padding>
+                        <Insets top="40.0" />
+                    </padding>
+                </HBox>
+                <HBox alignment="CENTER" prefHeight="36.0" prefWidth="433.0" spacing="8.0">
+                    <children>
+                        <Text fill="#4d4126" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Calligraphic;" text="Cechy główne:" wrappingWidth="108.54399871826172">
+                            <font>
+                                <Font name="Calligraphic Regular" size="16.0" />
+                            </font>
+                        </Text>
+                    </children>
+                </HBox>
+            <HBox alignment="CENTER" prefHeight="90.0" prefWidth="433.0" spacing="8.0">
+               <children>
+                  <VBox prefHeight="106.0" prefWidth="57.0" spacing="5.0">
+                     <children>
+                        <HBox id="cecha" alignment="CENTER" prefHeight="35.0" prefWidth="67.0" stylesheets="@Styles/StyleCard.css">
+                           <children>
+                              <Text fill="#eeeeee" strokeType="OUTSIDE" strokeWidth="0.0" text="K">
+                                 <font>
+                                    <Font name="Caladea Bold" size="13.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </HBox>
+                        <TextField fx:id="k">
+                           <effect>
+                              <SepiaTone />
+                           </effect>
+                           <font>
+                              <Font name="Caladea" size="12.0" />
+                           </font>
+                        </TextField>
+                     </children>
+                  </VBox>
+                  <VBox layoutX="190.0" layoutY="10.0" prefHeight="106.0" prefWidth="55.0" spacing="5.0">
+                     <children>
+                        <HBox id="cecha" alignment="CENTER" prefHeight="35.0" prefWidth="200.0" stylesheets="@Styles/StyleCard.css">
+                           <children>
+                              <Text fill="#eeeeee" strokeType="OUTSIDE" strokeWidth="0.0" text="Odp">
+                                 <font>
+                                    <Font name="Caladea Bold" size="13.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </HBox>
+                        <TextField fx:id="odp">
+                           <effect>
+                              <SepiaTone />
+                           </effect>
+                           <font>
+                              <Font name="Caladea Italic" size="12.0" />
+                           </font>
+                        </TextField>
+                     </children>
+                  </VBox>
+                  <VBox layoutX="244.0" layoutY="10.0" prefHeight="106.0" prefWidth="56.0" spacing="5.0">
+                     <children>
+                        <HBox id="cecha" alignment="CENTER" prefHeight="35.0" prefWidth="200.0" stylesheets="@Styles/StyleCard.css">
+                           <children>
+                              <Text fill="#eeeeee" strokeType="OUTSIDE" strokeWidth="0.0" text="Zr">
+                                 <font>
+                                    <Font name="Caladea Bold" size="13.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </HBox>
+                        <TextField fx:id="zr">
+                           <effect>
+                              <SepiaTone />
+                           </effect>
+                           <font>
+                              <Font name="Caladea" size="12.0" />
+                           </font>
+                        </TextField>
+                     </children>
+                  </VBox>
+                  <VBox layoutX="298.0" layoutY="10.0" prefHeight="78.0" prefWidth="59.0" spacing="5.0">
+                     <children>
+                        <HBox id="cecha" alignment="CENTER" prefHeight="35.0" prefWidth="200.0" stylesheets="@Styles/StyleCard.css">
+                           <children>
+                              <Text fill="#eeeeee" strokeType="OUTSIDE" strokeWidth="0.0" text="Ref">
+                                 <font>
+                                    <Font name="Caladea Bold" size="13.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </HBox>
+                        <TextField fx:id="ref">
+                           <effect>
+                              <SepiaTone />
+                           </effect>
+                           <font>
+                              <Font name="Caladea" size="12.0" />
+                           </font>
+                        </TextField>
+                     </children>
+                  </VBox>
+                  <VBox layoutX="293.0" layoutY="10.0" prefHeight="78.0" prefWidth="59.0" spacing="5.0">
+                     <children>
+                        <HBox id="cecha" alignment="CENTER" prefHeight="35.0" prefWidth="200.0" stylesheets="@Styles/StyleCard.css">
+                           <children>
+                              <Text fill="#eeeeee" strokeType="OUTSIDE" strokeWidth="0.0" text="Int">
+                                 <font>
+                                    <Font name="Caladea Bold" size="13.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </HBox>
+                        <TextField fx:id="inte">
+                           <effect>
+                              <SepiaTone />
+                           </effect>
+                           <font>
+                              <Font name="Caladea" size="12.0" />
+                           </font>
+                        </TextField>
+                     </children>
+                  </VBox>
+                  <VBox layoutX="327.0" layoutY="10.0" prefHeight="78.0" prefWidth="59.0" spacing="5.0">
+                     <children>
+                        <HBox id="cecha" alignment="CENTER" prefHeight="35.0" prefWidth="200.0" stylesheets="@Styles/StyleCard.css">
+                           <children>
+                              <Text fill="#eeeeee" strokeType="OUTSIDE" strokeWidth="0.0" text="Per">
+                                 <font>
+                                    <Font name="Caladea Bold" size="13.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </HBox>
+                        <TextField fx:id="per">
+                           <effect>
+                              <SepiaTone />
+                           </effect>
+                           <font>
+                              <Font name="Caladea" size="12.0" />
+                           </font>
+                        </TextField>
+                     </children>
+                  </VBox>
+                  <VBox layoutX="360.0" layoutY="10.0" prefHeight="78.0" prefWidth="59.0" spacing="5.0">
+                     <children>
+                        <HBox id="cecha" alignment="CENTER" prefHeight="35.0" prefWidth="200.0" stylesheets="@Styles/StyleCard.css">
+                           <children>
+                              <Text fill="#eeeeee" strokeType="OUTSIDE" strokeWidth="0.0" text="Odp">
+                                 <font>
+                                    <Font name="Caladea Bold" size="13.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </HBox>
+                        <TextField fx:id="odp2">
+                           <effect>
+                              <SepiaTone />
+                           </effect>
+                           <font>
+                              <Font name="Caladea" size="12.0" />
+                           </font>
+                        </TextField>
+                     </children>
+                  </VBox>
+                  <VBox layoutX="386.0" layoutY="10.0" prefHeight="78.0" prefWidth="59.0" spacing="5.0">
+                     <children>
+                        <HBox id="cecha" alignment="CENTER" prefHeight="35.0" prefWidth="200.0" stylesheets="@Styles/StyleCard.css">
+                           <children>
+                              <Text fill="#eeeeee" strokeType="OUTSIDE" strokeWidth="0.0" text="SW">
+                                 <font>
+                                    <Font name="Caladea Bold" size="13.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </HBox>
+                        <TextField fx:id="sw">
+                           <effect>
+                              <SepiaTone />
+                           </effect>
+                           <font>
+                              <Font name="Caladea" size="12.0" />
+                           </font>
+                        </TextField>
+                     </children>
+                  </VBox>
+               </children>
+               <effect>
+                  <InnerShadow choke="0.06" color="#a88155" height="46.2" radius="22.97" width="47.68">
+                     <input>
+                        <Glow level="0.19" />
+                     </input></InnerShadow>
+               </effect>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="90.0" prefWidth="433.0" spacing="8.0">
+               <children>
+                  <VBox prefHeight="200.0" prefWidth="100.0" spacing="5.0">
+                     <children>
+                        <HBox id="cecha" alignment="CENTER" prefHeight="35.0" prefWidth="200.0" stylesheets="@Styles/StyleCard.css">
+                           <children>
+                              <Text fill="#eeeeee" strokeType="OUTSIDE" strokeWidth="0.0" text="S">
+                                 <font>
+                                    <Font name="Caladea Bold" size="13.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </HBox>
+                        <TextField fx:id="s">
+                           <effect>
+                              <SepiaTone />
+                           </effect>
+                           <font>
+                              <Font name="Caladea" size="12.0" />
+                           </font>
+                        </TextField>
+                     </children>
+                  </VBox>
+                  <VBox layoutX="190.0" layoutY="10.0" prefHeight="200.0" prefWidth="100.0" spacing="5.0">
+                     <children>
+                        <HBox id="cecha" alignment="CENTER" prefHeight="35.0" prefWidth="200.0" stylesheets="@Styles/StyleCard.css">
+                           <children>
+                              <Text fill="#eeeeee" strokeType="OUTSIDE" strokeWidth="0.0" text="Wt">
+                                 <font>
+                                    <Font name="Caladea Bold" size="13.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </HBox>
+                        <TextField fx:id="wt">
+                           <effect>
+                              <SepiaTone />
+                           </effect>
+                           <font>
+                              <Font name="Caladea" size="12.0" />
+                           </font>
+                        </TextField>
+                     </children>
+                  </VBox>
+                  <VBox layoutX="244.0" layoutY="10.0" prefHeight="200.0" prefWidth="100.0" spacing="5.0">
+                     <children>
+                        <HBox id="cecha" alignment="CENTER" prefHeight="35.0" prefWidth="200.0" stylesheets="@Styles/StyleCard.css">
+                           <children>
+                              <Text fill="#eeeeee" strokeType="OUTSIDE" strokeWidth="0.0" text="Sz">
+                                 <font>
+                                    <Font name="Caladea Bold" size="13.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </HBox>
+                        <TextField fx:id="sz">
+                           <effect>
+                              <SepiaTone />
+                           </effect>
+                           <font>
+                              <Font name="Caladea" size="12.0" />
+                           </font>
+                        </TextField>
+                     </children>
+                  </VBox>
+                  <VBox layoutX="298.0" layoutY="10.0" prefHeight="200.0" prefWidth="100.0" spacing="5.0">
+                     <children>
+                        <HBox id="cecha" alignment="CENTER" prefHeight="35.0" prefWidth="200.0" stylesheets="@Styles/StyleCard.css">
+                           <children>
+                              <Text fill="#eeeeee" strokeType="OUTSIDE" strokeWidth="0.0" text="Ini">
+                                 <font>
+                                    <Font name="Caladea Bold" size="13.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </HBox>
+                        <TextField fx:id="ini">
+                           <effect>
+                              <SepiaTone />
+                           </effect>
+                           <font>
+                              <Font name="Caladea" size="12.0" />
+                           </font>
+                        </TextField>
+                     </children>
+                  </VBox>
+                  <VBox layoutX="339.0" layoutY="10.0" prefHeight="200.0" prefWidth="100.0" spacing="5.0">
+                     <children>
+                        <HBox id="cecha" alignment="CENTER" prefHeight="35.0" prefWidth="200.0" stylesheets="@Styles/StyleCard.css">
+                           <children>
+                              <Text fill="#eeeeee" strokeType="OUTSIDE" strokeWidth="0.0" text="Kon">
+                                 <font>
+                                    <Font name="Caladea Bold" size="13.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </HBox>
+                        <TextField fx:id="kon">
+                           <effect>
+                              <SepiaTone />
+                           </effect>
+                           <font>
+                              <Font name="Caladea" size="12.0" />
+                           </font>
+                        </TextField>
+                     </children>
+                  </VBox>
+                  <VBox layoutX="362.0" layoutY="10.0" prefHeight="200.0" prefWidth="100.0" spacing="5.0">
+                     <children>
+                        <HBox id="cecha" alignment="CENTER" prefHeight="35.0" prefWidth="200.0" stylesheets="@Styles/StyleCard.css">
+                           <children>
+                              <Text fill="#eeeeee" strokeType="OUTSIDE" strokeWidth="0.0" text="PP">
+                                 <font>
+                                    <Font name="Caladea Bold" size="13.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </HBox>
+                        <TextField fx:id="pp">
+                           <effect>
+                              <SepiaTone />
+                           </effect>
+                           <font>
+                              <Font name="Caladea" size="12.0" />
+                           </font>
+                        </TextField>
+                     </children>
+                  </VBox>
+                  <VBox layoutX="377.0" layoutY="10.0" prefHeight="200.0" prefWidth="100.0" spacing="5.0">
+                     <children>
+                        <HBox id="cecha" alignment="CENTER" prefHeight="35.0" prefWidth="200.0" stylesheets="@Styles/StyleCard.css">
+                           <children>
+                              <Text fill="#eeeeee" strokeType="OUTSIDE" strokeWidth="0.0" text="Dow">
+                                 <font>
+                                    <Font name="Caladea Bold" size="13.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </HBox>
+                        <TextField fx:id="dow">
+                           <effect>
+                              <SepiaTone />
+                           </effect>
+                           <font>
+                              <Font name="Caladea" size="12.0" />
+                           </font>
+                        </TextField>
+                     </children>
+                  </VBox>
+                  <VBox layoutX="388.0" layoutY="10.0" prefHeight="200.0" prefWidth="100.0" spacing="5.0">
+                     <children>
+                        <HBox id="cecha" alignment="CENTER" prefHeight="35.0" prefWidth="200.0" stylesheets="@Styles/StyleCard.css">
+                           <children>
+                              <Text fill="#eeeeee" strokeType="OUTSIDE" strokeWidth="0.0" text="PS">
+                                 <font>
+                                    <Font name="Caladea Bold" size="13.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </HBox>
+                        <TextField fx:id="ps">
+                           <effect>
+                              <SepiaTone />
+                           </effect>
+                           <font>
+                              <Font name="Caladea" size="12.0" />
+                           </font>
+                        </TextField>
+                     </children>
+                  </VBox>
+               </children>
+               <effect>
+                  <InnerShadow choke="0.03" color="#a88155" height="36.57" radius="18.34" width="38.79">
+                     <input>
+                        <Glow level="0.2" />
+                     </input></InnerShadow>
+               </effect>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="90.0" prefWidth="433.0" spacing="10.0">
+               <children>
+                  <VBox prefHeight="200.0" prefWidth="85.0" spacing="5.0">
+                     <children>
+                        <HBox id="cecha" alignment="CENTER" prefHeight="35.0" prefWidth="0.0" stylesheets="@Styles/StyleCard.css">
+                           <children>
+                              <Text fill="#eeeeee" strokeType="OUTSIDE" strokeWidth="0.0" text="Żyw">
+                                 <font>
+                                    <Font name="Caladea Bold" size="13.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </HBox>
+                        <TextField fx:id="zyw">
+                           <effect>
+                              <SepiaTone />
+                           </effect>
+                           <font>
+                              <Font name="Caladea" size="12.0" />
+                           </font>
+                        </TextField>
+                     </children>
+                  </VBox>
+                  <VBox layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="85.0" spacing="5.0">
+                     <children>
+                        <HBox id="cecha" alignment="CENTER" prefHeight="35.0" prefWidth="200.0" stylesheets="@Styles/StyleCard.css">
+                           <children>
+                              <Text fill="#eeeeee" strokeType="OUTSIDE" strokeWidth="0.0" text="Szczęście">
+                                 <font>
+                                    <Font name="Caladea Bold" size="13.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </HBox>
+                        <TextField fx:id="szc">
+                           <effect>
+                              <SepiaTone />
+                           </effect>
+                           <font>
+                              <Font name="Caladea" size="12.0" />
+                           </font>
+                        </TextField>
+                     </children>
+                  </VBox>
+                  <VBox layoutX="110.0" layoutY="10.0" prefWidth="85.0" spacing="5.0">
+                     <children>
+                        <HBox id="cecha" alignment="CENTER" prefHeight="35.0" prefWidth="200.0" stylesheets="@Styles/StyleCard.css">
+                           <children>
+                              <Text fill="#eeeeee" strokeType="OUTSIDE" strokeWidth="0.0" text="Poczytalność">
+                                 <font>
+                                    <Font name="Caladea Bold" size="13.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </HBox>
+                        <TextField fx:id="poc">
+                           <effect>
+                              <SepiaTone />
+                           </effect>
+                           <font>
+                              <Font name="Caladea" size="12.0" />
+                           </font>
+                        </TextField>
+                     </children>
+                  </VBox>
+               </children>
+               <effect>
+                  <InnerShadow choke="0.03" color="#a88155" height="37.0" radius="18.25" width="38.0">
+                     <input>
+                        <Glow level="0.2" />
+                     </input></InnerShadow>
+               </effect>
+            </HBox>
+                <HBox alignment="CENTER" spacing="8.0" />
+            </children>
+        </VBox>
+        <ToggleButton id="powrot" layoutX="108.0" layoutY="596.0" mnemonicParsing="false" onAction="#previous" prefHeight="60.0" prefWidth="110.0" stylesheets="@Styles/StyleCard.css" text="Powrót" textFill="#bcb5b5">
+            <effect>
+                <SepiaTone />
+            </effect>
+            <font>
+                <Font name="Calligraphic Regular" size="15.0" />
+            </font></ToggleButton>
+      <ToggleButton id="powrot" fx:id="nextButton" layoutX="1034.0" layoutY="596.0" mnemonicParsing="false" onAction="#nextCharacter" prefHeight="60.0" prefWidth="110.0" stylesheets="@Styles/StyleCard.css" text="Następna" textFill="#bcb5b5">
+         <effect>
+            <SepiaTone />
+         </effect>
+         <font>
+            <Font name="Calligraphic Regular" size="15.0" />
+         </font>
+      </ToggleButton>
+      <ToggleButton id="powrot" fx:id="prevButton" layoutX="688.0" layoutY="596.0" mnemonicParsing="false" onAction="#prevCharacter" prefHeight="60.0" prefWidth="110.0" stylesheets="@Styles/StyleCard.css" text="Poprzednia" textFill="#bcb5b5">
+         <effect>
+            <SepiaTone />
+         </effect>
+         <font>
+            <Font name="Calligraphic Regular" size="15.0" />
+         </font>
+      </ToggleButton>
+        <Text fill="#4a3f28" layoutX="238.0" layoutY="637.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Calligrapher;" text="Imie:">
+            <font>
+                <Font name="Calligraphic Regular" size="16.0" />
+            </font>
+            <stroke>
+                <RadialGradient centerX="0.20555555555555555" centerY="0.5" radius="0.5">
+                    <stops>
+                        <Stop color="BLACK" />
+                        <Stop color="WHITE" offset="1.0" />
+                    </stops>
+                </RadialGradient>
+            </stroke>
+        </Text>
+        <TextField fx:id="nameField" layoutX="286.0" layoutY="617.0" prefHeight="30.0" prefWidth="157.0">
+            <effect>
+                <SepiaTone>
+                    <input>
+                        <InnerShadow />
+                    </input>
+            </SepiaTone>
+            </effect>
+            <font>
+                <Font name="Caladea" size="14.0" />
+            </font>
+        </TextField>
+      <ToggleButton id="powrot" fx:id="modifButton" layoutX="489.0" layoutY="596.0" mnemonicParsing="false" onAction="#modifCharacter" prefHeight="60.0" prefWidth="110.0" stylesheets="@Styles/StyleCard.css" text="Modyfikuj" textFill="#bcb5b5">
+         <effect>
+            <SepiaTone />
+         </effect>
+         <font>
+            <Font name="Calligraphic Regular" size="15.0" />
+         </font>
+      </ToggleButton>
+      <ToggleButton id="powrot" fx:id="saveButton" layoutX="489.0" layoutY="596.0" mnemonicParsing="false" onAction="#saveCharacter" prefHeight="60.0" prefWidth="110.0" stylesheets="@Styles/StyleCard.css" text="Zapisz" textFill="#bcb5b5" visible="false">
+         <effect>
+            <SepiaTone />
+         </effect>
+         <font>
+            <Font name="Calligraphic Regular" size="15.0" />
+         </font>
+      </ToggleButton>
+      <Text fx:id="page" fill="#46362d" layoutX="1114.0" layoutY="75.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Calligrapher;" wrappingWidth="73.0">
+         <font>
+            <Font size="18.0" />
+         </font></Text>
+      <ToggleButton id="powrot" fx:id="delButton" layoutX="863.0" layoutY="596.0" mnemonicParsing="false" onAction="#deleteCharacter" prefHeight="60.0" prefWidth="110.0" stylesheets="@Styles/StyleCard.css" text="Usuń" textFill="#bcb5b5">
+         <effect>
+            <SepiaTone />
+         </effect>
+         <font>
+            <Font name="Calligraphic Regular" size="15.0" />
+         </font>
+      </ToggleButton>
+    </children>
+</AnchorPane>

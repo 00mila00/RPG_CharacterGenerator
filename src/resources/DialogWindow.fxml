@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.effect.SepiaTone?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="bg" prefHeight="259.0" prefWidth="470.0" stylesheets="@/Styles/StyleDialog.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.DialogWindowController">
+   <children>
+      <ToggleButton id="ok" fx:id="okButton" layoutX="185.0" layoutY="142.0" mnemonicParsing="false" onAction="#exit" prefHeight="35.0" prefWidth="101.0" stylesheets="@/Styles/StyleDialog.css" text="OK" textFill="#f8e4c7">
+         <effect>
+            <SepiaTone />
+         </effect></ToggleButton>
+      <HBox alignment="CENTER" layoutX="68.0" layoutY="69.0" prefHeight="61.0" prefWidth="336.0">
+         <children>
+            <Text fx:id="message" fill="#403535" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Calligrapher;" text="Zagalopowałeś się!">
+               <font>
+                  <Font size="19.0" />
+               </font>
+               <effect>
+                  <SepiaTone />
+               </effect>
+            </Text>
+         </children>
+      </HBox>
+   </children>
+   <effect>
+      <InnerShadow />
+   </effect>
+</AnchorPane>
