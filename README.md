@@ -1,29 +1,21 @@
-# README #
+# Hello reader #
+This is an application from 2nd year of University, made by 3 people team :)
 
-This README would normally document whatever steps are necessary to get your application up and running.
+The application was created in IntelliJ environment. 
+My role was to make frontend side of this application and graphics e.g. drawing the characters :)
 
-### What is this repository for? ###
+Functionality:
+* Make your character add a new, fraction, race, skills etc.
+* Save your character to library
+* Roll the dices (from 4 to 100) you can roll the dices multiple times at once.
+* Enjoy the music and seek for Easter egg ;)
 
-* Quick summary
-* Version
-* [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
 
-### How do I get set up? ###
+You can see the screenshot of this application or download the project to see how this game works. (remember to add VM options)
 
-* Summary of set up
-* Configuration
-* Dependencies
-* Database configuration
-* How to run tests
-* Deployment instructions
 
-### Contribution guidelines ###
 
-* Writing tests
-* Code review
-* Other guidelines
 
-### Who do I talk to? ###
 
-* Repo owner or admin
-* Other community or team contact
+
+
